@@ -19,8 +19,30 @@
 
 //PREPARATION PHASE
 let age = parseInt(prompt("inserisci la tua età"))
+console.log(age)
+
 let kmNumber = parseInt(prompt("Inserisci i Kilometri che vuoi percorrere"))
+console.log(kmNumber)
+
 let price = kmNumber * 0.21
+console.log(price)
+
+//MAIN PHASE
+if (age < 18) {
+    price = price * 0.2
+    console.log(price)
+}
+
+else if (age >= 65) {
+    price = price * 0.4
+    console.log(price)
+}
+
+else {
+    price = price
+    console.log(price)
+}
+
 
 
 
