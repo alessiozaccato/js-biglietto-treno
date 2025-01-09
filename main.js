@@ -13,35 +13,41 @@
 
 //2.1 - 20% discount on the price IF the age is < of 18 
 
-//2.2 - 40% discount on the price IF the age is >= 65
+//2.2 - 40% discount on the price IF the age is > 65
 
-//3 - use console log to print on the console totalPrice and use the method tofix on that number
+//3 - use console log to print on the console total Price and use the method tofixed on that number
 
 //PREPARATION PHASE
+
 let age = parseInt(prompt("inserisci la tua età"))
-console.log(age)
+console.log("La tua età è:", age)
 
 let kmNumber = parseInt(prompt("Inserisci i Kilometri che vuoi percorrere"))
-console.log(kmNumber)
+console.log("I kilometri che vuoi percorrere sono:", kmNumber)
 
 let price = kmNumber * 0.21
-console.log(price)
+console.log("prezzo provvisorio:", price.toFixed(2))
+
 
 //MAIN PHASE
 if (age < 18) {
-    price = price * 0.2
-    console.log(price)
+    price = price - (price * 0.2)
 }
 
-else if (age >= 65) {
-    price = price * 0.4
-    console.log(price)
+else if (age > 65) {
+    price = price - (price * 0.4)
 }
 
 else {
-    price = price
-    console.log(price)
+    console.log("prezzo provvisorio:", price.toFixed(2))
 }
+
+//END PHASE
+console.log("prezzo totale:", price.toFixed(2));
+
+
+
+
 
 
 
